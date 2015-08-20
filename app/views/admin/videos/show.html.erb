@@ -1,20 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Tutorial:</b>
-  <%= @video.tutorial %>
-</p>
-
-<p>
-  <b>Title:</b>
+  <strong>Title:</strong>
   <%= @video.title %>
 </p>
 
 <p>
-  <b>Video url:</b>
+  <strong>Description:</strong>
+  <%= @video.description %>
+</p>
+
+<p>
+  <strong>Video url:</strong>
   <%= @video.video_url %>
 </p>
 
+<p>
+  <strong>Chapter:</strong>
+  <%= @video.chapter_id %>
+</p>
 
-<%= link_to 'Edit', edit_admin_tutorial_video_path(@video) %> |
-<%= link_to 'Back', admin_tutorial_videos_path %>
+<%= link_to 'Edit', edit_admin_video_path(@video) %> |
+<%= link_to 'Back', admin_videos_path %>

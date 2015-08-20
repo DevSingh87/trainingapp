@@ -1,27 +1,33 @@
 <h1>Listing videos</h1>
 
 <table>
-  <tr>
-    <th>Tutorial</th>
-    <th>Title</th>
-    <th>Video url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Video url</th>
+      <th>Chapter</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
 
-<% @videos.each do |video| %>
-  <tr>
-    <td><%= video.tutorial %></td>
-    <td><%= video.title %></td>
-    <td><%= video.video_url %></td>
-    <td><%= link_to 'Show', [:admin, video.tutorial, video] %></td>
-    <td><%= link_to 'Edit', edit_admin_tutorial_video_path(video.tutorial, video) %></td>
-    <td><%= link_to 'Destroy', [:admin, video.tutorial, video], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <tbody>
+    <% @videos.each do |video| %>
+      <tr>
+        <td><%= video.title %></td>
+        <td><%= video.description %></td>
+        <td><%= video.video_url %></td>
+        <td><%= video.chapter_id %></td>
+        <td><%= link_to 'Show', [:admin, video] %></td>
+        <td><%= link_to 'Edit', edit_admin_video_path(video) %></td>
+        <td><%= link_to 'Destroy', [:admin, video], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
+<br>
 
-<%= link_to 'New Video', new_admin_tutorial_video_path %>
+<%= link_to 'New Video', new_admin_video_path %>
