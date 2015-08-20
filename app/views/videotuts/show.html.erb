@@ -1,0 +1,368 @@
+<%
+  meta_title "#{@videotut.title}"
+  meta_keywords "#{@videotut.tutorial.tag_list}"
+  meta_description "#{@videotut.tutorial.title+" - "+@videotut.title}"
+  meta_og_url "#{request.protocol + request.host+request.fullpath}"
+  meta_og_image "#{cloudinary_url(@videotut.tutorial.image.image)}"
+  meta_video_url "#{'https://www.youtube.com/embed/'+@videotut.video_url}"
+  
+%>
+
+<!--
+	<div id="page-wrap">
+	        <section id="tutorial">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<h4><%= @videotut.tutorial.title %></h4>
+				
+			</div>
+			
+		</div>
+	
+</div>
+</section>
+		
+			<div class="container-fluid">
+
+				<div class="row-fluid">
+				  <div class="span3">
+				    <div class="scroll-pane">
+			<ul class="nav nav-list bs-docs-sidenav scrollable" data-height="700" data-visible="true">
+			   <% @videotuts.each do |videotut| %>
+				     <li>						
+				          <%= link_to videotut.title, lecture_videotut_path(videotut.tutorial, videotut), :title=>"videotut.title" %>
+
+					</li>	
+                <% end %>								   
+                           
+			</ul>
+		</div>
+				  <div class="row-fluid" style="padding-top:10px;">
+				   <div class="span12"> 
+                   <%= image_tag  "medium-rectangle.gif" %>				   
+				   </div>
+				   </div>
+				  </div>
+					<div class="span7">
+					 <div id="videosection">
+					 <section id="technology">
+									
+										<div class="row">
+											<div class="span12">
+												<h4><%= @videotut.title %></h4>
+												
+											</div>
+
+								</div>
+                         </section>
+						 </div>
+					   <div id="videotutorial">
+						<iframe id="ytplayer" type="text/html" width="640" height="360"
+							src="http://www.youtube.com/embed/<%= @videotut.video_url %>?modestbranding=1&showinfo=0&autohide=1&vq=hd720"
+							frameborder="0" allowfullscreen></iframe>
+						<div id="prev-next">
+						<div class="container-fluid">
+						<div class="row-fluid">
+				           <div class="span5">
+						    	<%= link_to( "Prev", lecture_videotut_path(@videotut.tutorial, @videotut.previous), :class=>"btn btn-warning") if @videotut.previous %>
+							</div>
+						<div class="span6" style="margin-left:-10px;">
+						    <%#<a href="#" class="btn btn-warning">Download this video</a>%>
+							</div>
+							<div class="span1">
+						     <%= link_to( "Next", lecture_videotut_path(@videotut.tutorial, @videotut.next), :class=>"btn btn-warning") if @videotut.next %>
+							</div>
+							</div>
+							</div>
+						</div>
+						</div>
+				 <div id="social-network">		
+				 <div class="row-fluid">
+				  <div class="span3">
+				   <div class="fb-like" data-href="http://www.techosh.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+				  </div>
+				  </div>
+				  </div>
+				         <div class="post-comments">
+										<h3>Comments</h3>
+										<div class="line-separator"></div>
+										<div id ="disqus_thread">  
+										 <%= raw disqus_thread %>  
+										 </div>
+									</div>
+					</div>
+					<div class="span2">
+					 <div class="ad-right-tower">
+					   <%= image_tag "wide-skyscraper.jpg" %>
+					</div>
+					<div class="fb-like-box" data-href="https://www.facebook.com/Techoshdotcom" data-width="160" data-height="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+					</div>
+				</div>
+	  </div>
+</div>
+		</div>
+	 </div>
+	</div>
+
+
+
+-->
+
+
+
+
+
+
+
+
+	<!-- BEGIN .content -->
+			<section class="content">
+				
+				<!-- BEGIN .wrapper -->
+				<div class="wrapper">
+					
+
+					<!-- <div class="breaking-news">
+						<div class="breaking-title">
+							<h3>Breaking News</h3>
+						</div>
+						<div class="breaking-block">
+							<ul>
+								<li><a href="category.html" class="break-category" style="background-color: #276197;">Tech News</a><h4><a href="post.html">Prize pool for The International 2014 surges to $5.7 million</a></h4><a href="post.html#comments" class="comment-link"><i class="fa fa-comment-o"></i>0</a></li>
+								<li><a href="category.html" class="break-category" style="background-color: #429d4a;">Contests</a><h4><a href="post.html">An rebum nusquam cum duo invenire mundi</a></h4><a href="post.html#comments" class="comment-link"><i class="fa fa-comment-o"></i>0</a></li>
+								<li><a href="category.html" class="break-category" style="background-color: #ffd800; color: #232323;">World News</a><h4><a href="post.html">An rebum nusquam cum duo invenire mundi</a></h4><a href="post.html#comments" class="comment-link"><i class="fa fa-comment-o"></i>0</a></li>
+							</ul>
+						</div>
+					</div> -->
+
+
+					<!-- <div class="main-content has-sidebar"> -->
+					<div class="main-content has-double-sidebar">
+
+						<!-- BEGIN .left-content -->
+						<div class="left-content">
+							<div class="main-title">
+								<h3><%= @videotut.title %></h3>
+								<span><%= @videotut.tutorial.title %></span>
+							</div>
+							
+							<div class="article-content">
+								
+					   <div class="video-embed">
+
+					
+				    <script>jwplayer.key="3tLHu+2P3LnFoLbNdr+S1haVowhfhU6aayxMaQ==";</script>
+				
+				<div id="myElement">Loading the player...</div>
+					<script type="text/javascript">
+					var playerInstance = jwplayer("myElement");
+					playerInstance.setup({
+					file: "http://www.youtube.com/watch?v=<%= @videotut.video_url %>&vq=hd720",
+					height: 370,
+					autostart: true,
+					width: "100%"
+
+					});
+					jwplayer().onPlay(function() { jwplayer().setCurrentQuality(2); });
+					</script>
+						
+							</div>
+						<div class="paragraph-row" style="padding-top:10px;">
+						<div class="column3">
+						    	<%= link_to( "Prev", lecture_videotut_path(@videotut.tutorial, @videotut.previous), :class=>"button") if @videotut.previous %>
+							</div>
+						
+							<div class="column3" style="margin-top:7px;">
+						     <div class="ot-star-rating">
+												<span style="width: 100%;" class=""><strong class="rating">5</strong> out of 5</span>
+												
+											</div>
+							</div>
+							<div class="column3" align="center" style="margin-top:7px;">
+						     <i class="fa fa-book"></i> <%= "#{1000+@videotut.impressionist_count} views!" %>
+							</div>
+							
+							<div class="column3" align="right">
+						     <%= link_to( "Next", lecture_videotut_path(@videotut.tutorial, @videotut.next), :class=>"button") if @videotut.next %>
+							</div>
+						<!--
+				          <div class="column4">
+						    	 <div class="ot-star-rating">
+												<span style="width: 100%;" class=""><strong class="rating">5</strong> out of 5</span>
+												
+											</div>
+							</div>
+							
+						<div class="column4" align="center">
+						     <i class="fa fa-book"></i>1000 views
+							</div>
+							
+							<div class="column4" align="right">
+						     <i class="fa fa-book"></i>1000 views
+							</div>
+														
+						</div>
+                       -->
+                       <!--
+						<div class="paragraph-row" >
+						
+				          <div class="column3">
+						    	<%= link_to( "Prev", lecture_videotut_path(@videotut.tutorial, @videotut.previous), :class=>"button") if @videotut.previous %>
+							</div>
+						
+							<div class="column5">
+						     <div class="ot-star-rating">
+												<span style="width: 100%;" class=""><strong class="rating">5</strong> out of 5</span><i class="fa fa-book"></i>1000 views
+												
+											</div>
+							</div>
+							
+							<div class="column4" align="right">
+						     <%= link_to( "Next", lecture_videotut_path(@videotut.tutorial, @videotut.next), :class=>"button") if @videotut.next %>
+							</div>
+						-->	
+						</div>
+						
+						</div>
+								
+
+
+
+					
+					   <div class="share-article-body" >
+								<div class="main-title">
+									<h2>Share this</h2>
+									
+								</div>
+								<div class="right" id="share" style="margin-left:280px; margin-top:-100px;">
+									
+									<a href="#" class="share-body ot-facebook" data-social='{"type":"facebook", "url":"<%= 'http://www.techosh.com'+request.fullpath %>"}' title="Techosh.com"><i class="fa fa-facebook" target = "_blank"></i><span>2.3k</span></a>
+									
+									<a href="#" class="share-body ot-twitter" data-social='{"type":"twitter", "url":"<%= 'http://www.techosh.com'+request.fullpath %>"}' title="Techosh.com"><i class="fa fa-twitter"></i><span>1.4k</span></a>
+									<a href="#" class="share-body ot-google" data-social='{"type":"plusone", "url":"<%= 'http://www.techosh.com'+request.fullpath %>"}' title="Techosh.com"><i class="fa fa-google-plus"></i><span>737</span></a>
+									<a href="#" class="share-body ot-linkedin" data-social='{"type":"linkedin", "url":"<%= 'http://www.techosh.com'+request.fullpath %>"}' title="Techosh.com"><i class="fa fa-linkedin"></i><span>824</span></a>
+									<a href="#" class="share-body ot-pinterest" data-social='{"type":"pinterest", "url":"<%= 'http://www.techosh.com'+request.fullpath %>"}' title="Techosh.com"><i class="fa fa-pinterest"></i><span>335</span></a>
+								</div>
+							</div>
+
+                       <div class="tut-content">
+                       <h3 style="color: #276197; border-bottom: 3px solid #276197;">Course Contents</h3>
+								<p><%= @videotuts.map(&:title).join(", ") %></p>
+							</div>
+							<!--
+							<div class="tag-cloud-body">
+								<a href="#">Expetendis</a>
+								<a href="#">semper euripidis</a>
+								<a href="#">Senserit</a>
+								<a href="#">phaedrum gubergren</a>
+								<a href="#">option nostrud</a>
+								<a href="#">Senserit</a>
+								<a href="#">phaedrum gubergren</a>
+								<a href="#">Expetendis</a>
+								<a href="#">option nostrud</a>
+							</div>
+							-->
+						<div class="article-body-banner banner">
+								<%= image_tag "no-banner-728x90.jpg" %>
+							</div>
+						 <div class="comment-list">
+								<div class="main-title">
+									<h2>Comments</h2>
+									
+								</div>
+								
+								<div class="block-comments">
+                                <%= raw disqus_thread %>  
+								</div>
+								</div>
+								<!-- END .left-content -->
+						</div>
+                    
+						<!-- BEGIN .small-sidebar -->
+						<div class="small-sidebar">
+							
+							<div class="widget">
+								<div class="banner">
+									<%= image_tag "no-banner-160x600.jpg" %>
+								</div>
+							</div>
+
+							
+
+						<!-- END .small-sidebar -->
+						</div>
+
+
+						<!-- BEGIN #sidebar -->
+						<aside id="sidebar">
+				
+														
+							<div class="widget">
+								<h3>Course Contents</h3>
+							<div class="scroll-pane">
+			<ul class="nav nav-list bs-docs-sidenav scrollable" data-height="500" data-visible="true">
+				     <% @videotuts.each do |videotut| %>
+				     <li>						
+				          <%= link_to videotut.title, lecture_videotut_path(videotut.tutorial, videotut), :title=>"videotut.title" %></li>	
+                <% end %>		
+                           
+			</ul>
+		</div>
+							</div>
+                   <div class="sidebar-fixed" style="margin-top:-130px;">
+
+								<div class="widget">
+									<h3>Socialize</h3>
+									<div class="socialize-widget">
+										
+										<div class="ot-social-block">
+											<a href="#" class="soc-link soc-facebook">
+												<strong>2k<small>likes</small></strong>
+												<span>facebook</span>											</a>
+											<a href="#" class="soc-link soc-twitter">
+												<strong>901<small>tweets</small></strong>
+												<span>twitter</span>											</a>
+											<a href="#" class="soc-link soc-google">
+												<strong>81<small>+1's</small></strong>
+												<span>google+</span>											</a>
+											<a href="#" class="soc-link soc-linkedin">
+												<strong>34<small>shares</small></strong>
+												<span>linkedin</span>											</a>										</div>
+									</div>
+								</div>
+
+								<div class="widget">
+									<div class="banner">
+										<%= image_tag "no-banner-300x250.jpg" %>								</div>
+								</div>
+
+						  </div>
+							
+
+						<!-- END #sidebar -->
+						</aside>
+
+
+					</div>
+					
+				<!-- END .wrapper -->
+				</div>
+				
+			<!-- BEGIN .content -->
+			</section>
+		
+		
+		<script type="text/javascript">
+		$('.scrollable').slimScroll({
+		    height: '500px'
+		});
+				</script>
+
+				
+
+  <script>
+  $(document).ready(function(){
+    $("#share a").jqSocialSharer();
+  });  
+</script>

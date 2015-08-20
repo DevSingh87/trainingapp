@@ -1,0 +1,52 @@
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">	<a href="#dat-menu" class="ot-menu-toggle"><i class="fa fa-bars"></i>Toggle Menu</a>
+		<!-- BEGIN .boxed -->
+		<div class="boxed active">
+			
+			<!-- BEGIN .header -->
+			<header class="header willfix">
+				
+				<!-- BEGIN .wrapper -->
+				<div class="wrapper">
+
+					<div class="header-left">
+						<div class="header-logo">
+							<a href="index.html" class="otanimation" data-anim-object=".header-logo a.otanimation img, .header-logo a.otanimation h1" data-anim-in="flipOutX" data-anim-out="bounceIn"><%= image_tag "logo1.png" %></a>
+							<strong data-anim-in="fadeOutUpBig" data-anim-out="bounceIn"><i class="fa fa-home"></i> Homepage</strong>
+						</div>
+						<div class="header-socials">
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+							<a href="#"><i class="fa fa-youtube"></i></a>
+							<a href="#"><i class="fa fa-vimeo-square"></i></a>
+						</div>
+					</div>
+
+					<div class="header-right">
+						
+						<nav class="under-menu">
+							<ul class="load-responsive" rel="Sub Menu">
+								<li><%= link_to "All Tutorials", admin_tutorials_path %>
+								</li>
+								<li><%= link_to "All Articles", admin_articles_path %>
+								</li>
+	
+								
+								
+					  <li><% if user_signed_in? %>  
+						<%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'button' %>  
+					  <% else %>  
+						<%= link_to "Sign in", new_user_session_path, :class => 'button' %>  
+					  <% end %> </li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="clear-float"></div>
+					
+				<!-- END .wrapper -->
+				</div>
+				
+			<!-- END .header -->
+			</header>
+			

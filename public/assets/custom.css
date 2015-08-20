@@ -1,0 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+ 
+
+.login{background:#368ee0}.login .wrapper{
+	width:400px;
+	height:500px;
+	position:absolute;
+	left:50%;
+	margin-top: 100px;
+	margin-right: -200px;
+	margin-bottom: 200px;
+	margin-left: -200px;
+}
+
+.login .wrapper h1>a{color:#fff;display:block;font-weight:300;font-size:48px;text-align:center;padding:2px 0;text-decoration:none}.login .wrapper h1>a img{margin-right:20px;margin-top:-8px}.login .wrapper .login-body{margin-top:20px;background:#fff}.login .wrapper .login-body form{padding:0 30px}.login .wrapper .login-body h2{font-weight:300;color:#333;font-size:24px;padding:20px 30px 5px 30px}.login .wrapper .login-body .email input,.login .wrapper .login-body .pw input{padding:8px 12px;height:35px}.login .wrapper .login-body .submit{margin-top:15px;*zoom:1}.login .wrapper .login-body .submit:after{content:"";display:table;clear:both}.login .wrapper .login-body .submit input{float:right}.login .wrapper .login-body .forget{margin-top:50px}.login .wrapper .login-body .forget a{background:#eee;padding:10px 0;text-align:center;display:block;text-decoration:none;color:#555}.login .wrapper .login-body .forget a:hover{background:#ddd}.login .wrapper .login-body .forget a span{line-height:30px;margin-bottom:10px;position:relative}.minitiles{float:left;margin:0;padding:0;list-style-type:none}.minitiles li{float:left;margin-right:15px}.minitiles li a{display:block;height:61px;width:61px;color:#fff;text-decoration:none;position:relative;text-align:center}.minitiles li a i{font-size:36px;line-height:61px}.minitiles li a:hover:before{content:'';position:absolute;left:0;top:0;width:55px;height:55px;background:none;pointer-events:none;border:3px solid rgba(0,0,0,0.5);z-index:99}body.error{background:#368ee0}body.error .wrapper{width:300px;height:230px;position:absolute;top:50%;left:50%;margin:-165px -150px}body.error .wrapper .code{color:#fff;font-size:90px;text-align:center}body.error .wrapper .code span{margin-right:15px}body.error .wrapper .desc{color:#fff;font-size:14px;margin:20px 0}body.error .wrapper .input-append{width:300px;background:#fff;padding:2px}body.error .wrapper .input-append input{border:0;width:260px;background:#fff}body.error .wrapper .input-append .btn{border:0;background:#368ee0;color:#fff}body.error .wrapper .input-append .btn:hover{background:#1b67af}
+
+.btn.btn-primary{background:#368ee0;color:#fff;text-shadow:none;filter:none}.btn.btn-primary:hover{background:#368ee0}
+.text input[type="text"]{border:0;margin-bottom:0;display:block}

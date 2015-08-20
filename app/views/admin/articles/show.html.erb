@@ -1,0 +1,35 @@
+<div id="page-wrap" style="padding-top:10px;">
+ <div class="container-fluid">
+      <div class="row-fluid">
+					<div class="span12">
+						<div class="box box-color box-bordered">
+							<div class="box-title">
+								<h3>
+									<i class="icon-table"></i>
+									Showing Article
+								</h3>
+							</div>
+							<div class="box-content">
+							<p class="notice"><%= notice %></p>
+                                 <p class="alert"><%= alert %></p>
+
+					<p>
+					  <b>Title:</b>
+					  <%= @article.title %>
+					</p>
+
+					<p>
+					  <b>Body:</b>
+					  <%= @article.body %>
+					</p>
+
+
+<%= link_to 'Edit', edit_admin_article_path(@article) %> |
+<%= link_to 'Back', admin_articles_path %>
+</div>
+
+						</div>
+					</div>
+				</div>
+				</div>
+				</div>

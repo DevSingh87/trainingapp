@@ -1,0 +1,51 @@
+<%= form_for([:admin,@tutorial]) do |f| %>
+  <% if @tutorial.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tutorial.errors.count, "error") %> prohibited this tutorial from being saved:</h2>
+
+      <ul>
+      <% @tutorial.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="field">
+    Category<br />
+    <%= f.collection_select :category_id, Category.all, :id, :name, { :prompt => '--Choose Category--' }, { mutilple: false } %>
+  </div>
+  <div class="field">
+    University<br />
+    <%= f.collection_select :university_id, University.all, :id, :name, { :prompt => '--Choose University--' }, { mutilple: false } %>
+  </div>
+  <div class="field">
+    Subject<br />
+   <%= f.collection_select :subject_id, Subject.all, :id, :name, { :prompt => '--Choose Subject--' }, { mutilple: false } %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.cktext_area :description, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %>
+  </div>
+ <%= f.fields_for :videos do |videos| %>
+ <%= render 'video_fields', f: videos %>
+ <% end %>
+  <%= link_to_add_fields "Add Video", f, :videos %> 
+ <%= f.fields_for :image do |bundler| %>
+  <div class="field">
+    <%= bundler.label :image %><br>
+    <%= bundler.file_field :image %>
+  </div>
+  <% end %>
+ 
+  <div class="field">
+    <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+    <%= f.text_field :tag_list %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

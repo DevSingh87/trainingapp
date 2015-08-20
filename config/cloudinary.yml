@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: techosh
+  api_key: '647248845925661'
+  api_secret: FTf0xG-prk1RVzj07DSZcusHUE8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: techosh
+  api_key: '647248845925661'
+  api_secret: FTf0xG-prk1RVzj07DSZcusHUE8
+  enhance_image_tag: true
+  static_image_support: false
+test:
+  cloud_name: techosh
+  api_key: '647248845925661'
+  api_secret: FTf0xG-prk1RVzj07DSZcusHUE8
+  enhance_image_tag: true
+  static_image_support: false

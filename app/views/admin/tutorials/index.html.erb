@@ -1,0 +1,77 @@
+<style type="text/css">
+	.pagination a, .pagination span.current, .pagination span.gap {
+    float: left;
+    padding: 0 14px;
+    line-height: 38px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #DDD;
+    border-left-width: 0;
+}
+
+.pagination {
+    border-left: 1px solid #ddd;
+    .first{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .prev {
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .page{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .next{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .last{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+}
+</style><div id="page-wrap" style="padding-top:10px;">
+ <div class="container-fluid">
+  <%= link_to 'New Tutorial', new_admin_tutorial_path, :class => 'btn btn-warning' %>
+    <div class="row-fluid">
+					<div class="span12">
+						<div class="box box-color box-bordered">
+							<div class="box-title">
+								<h3>
+									<i class="icon-table"></i>
+									Listing Tutorials
+								</h3>
+							</div>
+							<div class="box-content nopadding">
+							<p class="notice"><%= notice %></p>
+                                 <p class="alert"><%= alert %></p>
+								<table class="table table-hover table-nomargin dataTable table-bordered">
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										  </tr>
+									</thead>
+									<tbody id="tutorials">
+									 <%= render 'tutorials' %>
+									</tbody>
+								</table>
+								<div class="pagination">
+									<%= paginate @tutorials %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				</div>
+				

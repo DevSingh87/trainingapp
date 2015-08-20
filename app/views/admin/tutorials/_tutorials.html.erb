@@ -1,0 +1,8 @@
+                                     <% @tutorials.each do |tutorial| %>
+										  <tr>
+											<td><%= tutorial.title %></td>
+											<td><%= link_to 'Show', [:admin, tutorial] %></td>
+											<td><%= link_to 'Edit', edit_admin_tutorial_path(tutorial) %></td>
+											<td><%= link_to 'Destroy', [:admin, tutorial], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+										  </tr>
+										<% end %>                                     

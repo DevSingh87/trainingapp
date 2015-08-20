@@ -1,0 +1,29 @@
+<body class='login'>
+<div class="wrapper">
+    <div id="content">
+    <a name="top"></a>
+       
+									 <%= devise_error_messages! %>
+								    <% flash.each do |key, value| %>
+									<div class="alert alert-danger">
+  <%= value %><strong> Try again !!!!</strong> 
+</div>  
+<% end %>  
+		<h1><a href="index.html"><img src="http://software.triedge.in/assets/img/logo.png" alt="" class='retina-ready'></a></h1>
+		<div class="login-body">
+			<h2>SIGN IN</h2>
+			<%= form_for(resource, as: resource_name, url: session_path(resource_name), :class=>"horizontal") do |f| %>				<div class="email">
+					<%= f.text_field :email, autofocus: true, :placeholder => "Email Id", :class=>"input-block-level" %>
+				</div>
+				<div class="pw">
+					<%= f.password_field :password, autocomplete: "off", :placeholder => "Password", :class=>"input-block-level" %>
+				</div>
+				<div class="submit">
+					<%= f.submit "Sign in", :class => "btn btn-primary" %>
+				</div>
+			<% end %>			<div class="forget">
+				<a href="http://www.techosh.com" target="_blank"><span>www.techosh.com</span></a>
+			</div>
+		</div>
+	</div></div>
+</body>

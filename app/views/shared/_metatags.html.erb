@@ -1,0 +1,26 @@
+<title><%= yield(:title).presence || "Techosh.com - Free Video Tutorials Lectures in English-Hindi" %></title>
+<meta name="keywords" content="<%= yield(:meta_keywords).presence || "free video tutorials, free video lectures, free online video tutorials, free online video tutorials lectures in hindi urdu" %>" />
+<meta name="description" content="<%= yield(:meta_description).presence || "C++ Programming Language, C Programming Language, Java Programming Language, Python Programming Language, Ruby Programming Language, PHP Programming Language, C# Programming Language, MySql Database, SQL Server Database, Django MVC Framework, Ruby On Rails MVC Framework, Zend MVC Framework, Codeigniter MVC Framework ,Android Mobile Development, PhoneGap Mobile Development, JavaScript Programming, jQuery Programming, HTML5 Programming, CSS3 Styling, Web Development, Java in Hindi, C++ in Hindi, HTML - CSS in Hindi, jQuery in Hindi, PHP in Hindi, WordPress Development in Hindi, Tally ERP9 in Hindi" %>" />
+<meta name="author" content="techoshdotcom" />
+<meta property="og:title" content="<%= yield(:title).presence || "Free Online Video Tutorials-Lectures" %>" />
+<meta property="og:description" content="Click here to watch the video." />
+<meta property="og:url" content="<%= yield(:meta_og_url).presence || "http://www.techosh.com/" %>" />
+<meta property="og:site_name" content="http://www.techosh.com/" />
+<meta property="og:image" content="<%= yield(:meta_og_image).presence || "http://www.techosh.com/banner.png" %>" />
+<meta property="og:type" content="video.other" />
+<meta property="og:video:type" content="application/x-shockwave-flash">
+<meta property="fb:app_id" content="1398035213779305" />
+
+<meta name="video_type" content="application/x-shockwave-flash" />
+
+        <link rel="image_src" href="<%= yield(:meta_og_image).presence || "http://www.techosh.com/banner.png" %>" />
+        <link rel="video_src" href="<%= yield(:meta_video_url).presence || "https://www.youtube.com/embed/bMrgTfAmBKg" %>" />
+
+<meta name="twitter:site" content="@TechoshDotCom">
+<meta name="twitter:card" content="Watch Video" />
+
+<meta name="twitter:title" content="<%= yield(:title).presence || "Free Online Video Tutorials-Lectures" %>" />
+
+<meta name="twitter:description" content="Click here to watch the video." />
+<meta name="twitter:url" content="http://www.techosh.com" />
+<meta name="twitter:image" content="<%= yield(:meta_og_image).presence || "http://www.techosh.com/logo.png" %>" />
